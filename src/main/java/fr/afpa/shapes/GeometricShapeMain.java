@@ -1,4 +1,7 @@
 package fr.afpa.shapes;
+
+import java.util.ArrayList;
+
 /*
 	Objectif : développer des classes représentant des formes géométriques (Rectangle, Cercle et Triangle)
 	Pour chacune de ces classes il faudra implémenter deux méthodes :
@@ -38,10 +41,23 @@ class GeometricShapeMain
 	public static void main(String[] args) 
 	{
 		// TODO instancier plusieurs objets des classes Rectangle et Circle (2 instances de chaque)
+		Circle circle1 = new Circle(30);
+		Circle circle2 = new Circle(50);
+
+		Rectangle rectangle1 = new Rectangle(20, 40);
+		Rectangle rectangle2 = new Rectangle(10, 30);
 
 		// TODO ajouter ces objets à une instance de la classe "ArrayList"
 		// plus d'information sur la classe "ArrayList" -> https://info.clg.qc.ca/java/structures/array-list
+		ArrayList<Shape> listShapes = new ArrayList<>();
+		listShapes.add(circle1);
+		listShapes.add(circle2);
+		listShapes.add(rectangle1);
+		listShapes.add(rectangle2);
 
 		// TODO boucler sur les éléments de la liste afin d'afficher le périmètre et l'aire de chaque objet
+		for (Shape shapes : listShapes) {
+			System.out.println(shapes);
+		}
 	}	
 }
